@@ -1,0 +1,35 @@
+{
+  "name": "cinema_api",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A cinema API",
+  "main": "index.js",
+  "repository": "https://github.com/AnneLivia/CinemaAPI.git",
+  "author": "Anne Livia <annelivia16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@joi/date": "^2.1.0",
+    "@prisma/client": "^3.10.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "winston": "^3.6.0",
+    "winston-daily-rotate-file": "^4.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.10.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  }
+}

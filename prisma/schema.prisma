@@ -1,0 +1,58 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum SessionRoom {
+  IMAX
+  XD
+  COMMON
+  DLUX
+}
+
+enum Classification {
+  GENERAL_AUDIENCE
+  PARENT_GUIDANCE_SUGGESTED
+  RESTRICTED
+}
+
+model Movie {
+  id             String         @id @default(uuid())
+  name           String
+  description    String
+  classification Classification @default(GENERAL_AUDIENCE)
+  duration       Int
+  Session        Session[]
+}
+
+model Session {
+  id      String      @id @default(uuid())
+  room    SessionRoom @default(COMMON)
+  sessionDate String
+  movie   Movie       @relation(fields: [movieId], references: [id])
+  movieId String
+}
+
+model User {
+  id String @id @default(uuid())
+  role Role @default(USER)
+  name String 
+  birthDate String
+  email String @unique
+  password String 
+  reviewer Boolean @default(false) 
+  updatedAt DateTime @updatedAt
+  createAt DateTime @default(now()) 
+}
