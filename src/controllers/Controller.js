@@ -1,4 +1,4 @@
-import prisma from '../database/prisma.js';
+import prisma from "../database/prisma.js";
 
 class Controller {
   constructor(model) {
@@ -8,8 +8,8 @@ class Controller {
 
   /**
    * @description Get all Registries according to Model name
-   * @param {*} req
-   * @param {*} res
+   * @param {*} req Object with properties about the HTTP request
+   * @param {*} res Object representing the HTTP response sent when an HTTP request occurs
    * @returns
    */
 
@@ -21,8 +21,8 @@ class Controller {
 
   /**
    * @description Get One Registry by Id according to Model name
-   * @param {*} request
-   * @param {*} response
+   * @param {*} req Object with properties about the HTTP request
+   * @param {*} res Object representing the HTTP response sent when an HTTP request occurs
    * @returns
    */
 
@@ -41,8 +41,8 @@ class Controller {
 
   /**
    * @description Create a new registry according to Model name
-   * @param {*} request
-   * @param {*} response
+   * @param {*} req Object with properties about the HTTP request
+   * @param {*} res Object representing the HTTP response sent when an HTTP request occurs
    * @returns
    */
 
@@ -51,44 +51,70 @@ class Controller {
       const registry = await this.client.create({ data: req.body });
       res.json(registry);
     } catch (error) {
+      // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
+      if (error.code === "P2002") {
+        return res
+          .status(400)
+          .json({
+            error: "Invalid Data",
+            message: `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}.`,
+          });
+      }
+
+      // other errors
       console.error(error);
-      res.status(400).json({ message: 'Unexpected error.' });
+      res.status(400).json({ message: "Unexpected error." });
     }
   }
 
   /**
    * @description Update a registry by id according to Model name
-   * @param {*} request
-   * @param {*} response
+   * @param {*} req Object with properties about the HTTP request
+   * @param {*} res Object representing the HTTP response sent when an HTTP request occurs
    * @returns
    */
 
   async update(req, res) {
     const { id } = req.params;
     try {
-      const registry = await this.client.update({ where: { id }, data: req.body });
+      const registry = await this.client.update({
+        where: { id },
+        data: req.body,
+      });
       res.json({ registry });
     } catch (error) {
+
+      // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
+      if (error.code === "P2002") {
+        return res
+          .status(400)
+          .json({
+            error: "Invalid Data",
+            message: `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}.`,
+          });
+      }
+
       console.error(error);
-      res.status(400).json({ message: 'Unexpected error.' });
+      res.status(400).json({ message: "Unexpected error." });
     }
   }
 
   /**
    * @description Remove a registry by id according to Model name
-   * @param {*} request
-   * @param {*} response
+   * @param {*} req Object with properties about the HTTP request
+   * @param {*} res Object representing the HTTP response sent when an HTTP request occurs
    * @returns
    */
 
   async remove(req, res) {
     const { id } = req.params;
     try {
-      await this.client.delte({ where: { id } });
-      res.json({ message: `${this.model} was deleted` });
+      await this.client.delete({ where: { id } });
+      res.json({ message: `${this.model} was deleted successfully` });
     } catch (error) {
+      // returns a RecordNotFound if the registry is not found
       console.error(error);
-      res.status(400).json({ message: 'Unexpected error.' });
+      res.status(404).json({ message: "Record to delete does not exist." });
     }
   }
 }
