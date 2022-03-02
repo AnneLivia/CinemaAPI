@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -15,5 +16,6 @@ module.exports = {
     'linebreak-style': 0,
     'no-console': 'off',
     'import/extensions': 0,
+    'consistent-return': 'off',
   },
 };

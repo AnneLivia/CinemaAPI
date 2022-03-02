@@ -1,0 +1,171 @@
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:18:42.200Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:18:43.941Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 4100.621 ms - 1324\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:19:11.402Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:20:20.950Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 4121.229 ms - 193\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:20:26.913Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:21:41.861Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 4106.128 ms - 193\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:25:07.310Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:26:39.318Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:27:45.482Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:32:29.416Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:33:04.631Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 8.587 ms - 37\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:35:20.261Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 9.289 ms - 37\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:35:30.555Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 4.822 ms - 37\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:35:36.427Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:36:10.282Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 13.786 ms - 27\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:36:14.728Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 1.182 ms - 37\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:36:24.041Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 4081.483 ms - 193\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:36:24.886Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 3.149 ms - 193\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:36:27.128Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[33m401\u001b[0m 5.101 ms - 27\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:36:47.216Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:39:14.963Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:43:24.530Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:43:33.216Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 4274.738 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:50:54.453Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 3.056 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:51:03.849Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 3.148 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:51:35.271Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 2.235 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:51:54.509Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 1.905 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:52:20.661Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[31m500\u001b[0m 2.493 ms - 148\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:52:27.073Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T19:58:01.491Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 1490.608 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:08.599Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 12.192 ms - 470\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:15.312Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/726e6975-fb95-4a0b-a711-ff83d63d5c46 \u001b[32m200\u001b[0m 108.906 ms - 148\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:21.523Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/726e6975-fb95-4a0b-a711-ff8 \u001b[33m404\u001b[0m 34.904 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:24.133Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 4.709 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:37.683Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/ \u001b[33m404\u001b[0m 2.055 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:58:55.544Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 127.363 ms - 108\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T19:59:00.899Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:00:47.685Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 66.757 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:00:54.101Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/9961925a-38c7-47fc-be45-8ed0c \u001b[33m404\u001b[0m 17.792 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:01:10.777Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 7.278 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:02:11.110Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 7.058 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:02:36.700Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 17.171 ms - 142\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:02:41.765Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 11.309 ms - 187\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:02:58.325Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:03:54.947Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:04:29.911Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:04:55.661Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:05:13.334Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:05:21.766Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:05:37.928Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:06:20.841Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:06:46.914Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:07:21.855Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:08:18.561Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:08:34.249Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:09:09.435Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:09:14.270Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:09:35.466Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:09:55.761Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:10:03.962Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:10:11.487Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:10:23.736Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:10:51.733Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:11:09.426Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 66.421 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:11:13.329Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:11:37.776Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:12:04.124Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:12:17.181Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:12:43.451Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:13:19.425Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 259.504 ms - 61\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:13:20.440Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:13:55.993Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:14:20.565Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:14:26.703Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:15:28.554Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:15:40.050Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:15:48.647Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:16:20.419Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:17:32.959Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:18:01.570Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:20:45.489Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:22:00.272Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:22:45.344Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/users/qddqdq \u001b[33m404\u001b[0m 83.440 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:23:03.094Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:23:53.380Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:25:19.274Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/qddqdq \u001b[33m404\u001b[0m 6.391 ms - 156\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:25:23.202Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:25:35.520Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:27:23.451Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:27:33.345Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:28:24.778Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/ \u001b[33m404\u001b[0m 8.317 ms - 149\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:28:25.466Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:28:57.575Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:29:08.830Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:29:25.393Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:29:28.375Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:29:48.465Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:29:55.400Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ddaa \u001b[33m404\u001b[0m 75.480 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:30:12.564Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:33:07.521Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:33:30.831Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:34:04.842Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:34:10.953Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:34:26.951Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:35:46.116Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:36:01.176Z"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[32m200\u001b[0m 105.727 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:36:03.331Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:37:22.159Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:39:15.704Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:40:07.612Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:41:05.478Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:41:23.648Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:41:34.405Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:41:52.707Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:41:59.599Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:42:24.996Z"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[32m200\u001b[0m 62.562 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:43:03.156Z"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[32m200\u001b[0m 13.032 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:43:22.662Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:43:35.165Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:44:40.191Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:44:47.868Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:45:14.045Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:45:21.819Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:45:34.578Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:45:57.201Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users \u001b[33m400\u001b[0m 255.477 ms - 61\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:46:01.050Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:51:08.295Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:51:23.567Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/dwdwdw \u001b[33m404\u001b[0m 82.302 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:51:28.299Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:55:30.040Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:55:46.780Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T20:56:33.795Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/dwdwdw \u001b[33m404\u001b[0m 73.309 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:56:52.411Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/dwdwdw \u001b[33m404\u001b[0m 6.742 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:56:55.532Z"}
+{"level":"info","message":"\u001b[0mGET /api/users/ \u001b[32m200\u001b[0m 8.042 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:56:58.218Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 12.096 ms - 470\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:57:02.238Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/22332 \u001b[33m404\u001b[0m 127.821 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:57:05.835Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users \u001b[33m400\u001b[0m 204.917 ms - 61\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:57:23.010Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users \u001b[33m400\u001b[0m 8.286 ms - 94\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:57:28.742Z"}
+{"level":"info","message":"\u001b[0mGET /api/users \u001b[32m200\u001b[0m 7.422 ms - 621\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:57:58.977Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/9961925a-38c7-47fc-be45-8ed0ce34ee45 \u001b[33m400\u001b[0m 7.105 ms - 94\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:58:14.981Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/9961925a-38c7-47fc-be45-8ed0ce34ee45 \u001b[33m400\u001b[0m 157.225 ms - 61\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:58:19.783Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/9961925a-38c7-47fc-be45-8ed0ce34ee45 \u001b[32m200\u001b[0m 159.818 ms - 314\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:58:31.880Z"}
+{"level":"info","message":"\u001b[0mPUT /api/users/9961925a-38c7-47fc-be45 \u001b[33m404\u001b[0m 147.674 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:58:51.003Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/users/9961925a-38c7-47fc-be45 \u001b[33m404\u001b[0m 12.021 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T20:59:01.687Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T21:00:33.097Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T21:03:25.419Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 354.708 ms - 61\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:03:45.018Z"}
+{"level":"info","message":"\u001b[0mPOST /api/users/ \u001b[33m400\u001b[0m 9.556 ms - 94\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:03:49.213Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[33m400\u001b[0m 5.576 ms - 94\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:03:57.648Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[33m400\u001b[0m 143.929 ms - 35\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:01.814Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[33m404\u001b[0m 67.961 ms - 28\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:13.241Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[32m200\u001b[0m 191.451 ms - 421\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:19.257Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[33m400\u001b[0m 4.355 ms - 94\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:23.374Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[33m400\u001b[0m 134.741 ms - 35\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:26.982Z"}
+{"level":"info","message":"\u001b[0mPOST /api/login/ \u001b[32m200\u001b[0m 146.859 ms - 421\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:04:30.549Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 15.892 ms - 470\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:05:06.687Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 10.576 ms - 470\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:05:33.653Z"}
+{"level":"info","message":"\u001b[0mPOST /api/movies/ \u001b[32m200\u001b[0m 80.762 ms - 147\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:05:37.773Z"}
+{"level":"info","message":"\u001b[0mPOST /api/movies/ \u001b[33m400\u001b[0m 6.890 ms - 86\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:05:53.030Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T21:06:14.141Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 71.385 ms - 618\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:06:17.887Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/726e6975-fb95-4a0b-a711-ff83d63d5c46 \u001b[32m200\u001b[0m 16.828 ms - 148\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:06:35.546Z"}
+{"level":"info","message":"\u001b[0mPUT /api/movies/726e6975-fb95-4a0b-a711-ff83d63d5c46 \u001b[32m200\u001b[0m 103.769 ms - 159\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:06:41.989Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-02T21:07:15.497Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/726e6975-fb95-4a0b-a711- \u001b[33m404\u001b[0m 76.114 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:07:37.912Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 8.701 ms - 618\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:07:41.519Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 46.629 ms - 441\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:07:54.118Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/0fb887c2-3392-4874-867a-bb878e4cb10d \u001b[33m400\u001b[0m 11.772 ms - 88\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:08:15.948Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/0fb887c2-3392-4874-867a-bb878e4cb10d \u001b[32m200\u001b[0m 43.076 ms - 154\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:08:23.862Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/0fb887c2-3392-4874-867a-bb878e4cb10d \u001b[32m200\u001b[0m 4.362 ms - 143\u001b[0m\n","service":"user-service","timestamp":"2022-03-02T21:08:26.787Z"}

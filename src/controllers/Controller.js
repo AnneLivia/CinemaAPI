@@ -1,9 +1,15 @@
-import prisma from "../database/prisma.js";
+import prisma from '../database/prisma.js';
+import { BadRequest, NotFound } from '../utils/CustomError.js';
+import logger from '../utils/logger.js';
 
 class Controller {
   constructor(model) {
     this.model = model;
     this.client = prisma[model];
+
+    if (!this.client) {
+      logger.error(`Model ${this.model} does not exists on Prisma Schema.`);
+    }
   }
 
   /**
@@ -13,10 +19,11 @@ class Controller {
    * @returns
    */
 
-  async index(req, res) {
+  // eslint-disable-next-line no-unused-vars
+  async index(req, res, next) {
     // return an array of registries
-    const registries = await this.client.findMany();
-    res.json({ registries });
+    const records = await this.client.findMany();
+    res.json({ records });
   }
 
   /**
@@ -26,17 +33,21 @@ class Controller {
    * @returns
    */
 
-  async getOne(req, res) {
+  async getOne(req, res, next) {
     const { id } = req.params;
 
-    const registry = await this.client.findUnique({ where: { id } });
+    const record = await this.client.findUnique({ where: { id } });
 
-    if (registry) {
-      return res.json(registry);
+    if (record) {
+      return res.json(record);
     }
 
-    console.log(`${this.model} with id ${id} was not found.`);
-    return res.status(404).json({ message: `${this.model} not found.` });
+    console.log(`${this.model} with id ${id} was not found`);
+    // If synchronous code throws an error, I can throw it using just throw new Error('BROKEN')
+    // and Express will catch this on its own.
+    // For errors returned from asynchronous functions invoked by route handlers and middleware
+    // you must pass them to the next() function where Express will catch and process them
+    next(new NotFound('Record not found'));
   }
 
   /**
@@ -46,24 +57,20 @@ class Controller {
    * @returns
    */
 
-  async store(req, res) {
+  async store(req, res, next) {
     try {
-      const registry = await this.client.create({ data: req.body });
-      res.json(registry);
+      const record = await this.client.create({ data: req.body });
+      res.json(record);
     } catch (error) {
+      // need to pass the error to the express error middleware using next(error)
       // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
-      if (error.code === "P2002") {
-        return res
-          .status(400)
-          .json({
-            error: "Invalid Data",
-            message: `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}.`,
-          });
+      if (error.code === 'P2002') {
+        next(new BadRequest(`Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`));
       }
 
       // other errors
       console.error(error);
-      res.status(400).json({ message: "Unexpected error." });
+      next(new BadRequest('Unexpected error'));
     }
   }
 
@@ -74,28 +81,22 @@ class Controller {
    * @returns
    */
 
-  async update(req, res) {
+  async update(req, res, next) {
     const { id } = req.params;
     try {
-      const registry = await this.client.update({
+      const record = await this.client.update({
         where: { id },
         data: req.body,
       });
-      res.json({ registry });
+      res.json({ record });
     } catch (error) {
-
       // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
-      if (error.code === "P2002") {
-        return res
-          .status(400)
-          .json({
-            error: "Invalid Data",
-            message: `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}.`,
-          });
+      if (error.code === 'P2002') {
+        next(new BadRequest(`Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`));
       }
 
       console.error(error);
-      res.status(400).json({ message: "Unexpected error." });
+      next(new NotFound('Record to update does not exist'));
     }
   }
 
@@ -106,7 +107,7 @@ class Controller {
    * @returns
    */
 
-  async remove(req, res) {
+  async remove(req, res, next) {
     const { id } = req.params;
     try {
       await this.client.delete({ where: { id } });
@@ -114,7 +115,7 @@ class Controller {
     } catch (error) {
       // returns a RecordNotFound if the registry is not found
       console.error(error);
-      res.status(404).json({ message: "Record to delete does not exist." });
+      next(new NotFound('Record to delete does not exist'));
     }
   }
 }
