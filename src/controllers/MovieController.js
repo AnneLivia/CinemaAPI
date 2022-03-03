@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import Prisma from '@prisma/client';
 import Controller from './Controller.js';
-import { BadRequest } from '../utils/CustomError.js';
+import { BadRequest, Forbidden } from '../utils/CustomError.js';
 
 const { Classification } = Prisma;
 
@@ -10,7 +10,10 @@ class MovieController extends Controller {
     super('movie');
   }
 
+  // only admin user can store
   async store(req, res, next) {
+    if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
+
     const schema = Joi.object({
       name: Joi.string().required().max(50),
       description: Joi.string().required().max(5000),
@@ -32,7 +35,10 @@ class MovieController extends Controller {
     super.store(req, res, next);
   }
 
+  // only admin user can update
   async update(req, res, next) {
+    if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
+
     const schema = Joi.object({
       name: Joi.string().max(50),
       description: Joi.string().max(5000),
@@ -52,6 +58,13 @@ class MovieController extends Controller {
     }
 
     super.update(req, res, next);
+  }
+
+  // only admin can delete
+  async remove(req, res, next) {
+    if (req.userLogged.role === 'ADMIN') { return super.remove(req, res, next); }
+
+    throw new Forbidden('You don\'t have Admin privileges');
   }
 }
 

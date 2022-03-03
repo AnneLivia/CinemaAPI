@@ -6,7 +6,9 @@ import bcrypt from 'bcryptjs';
 import Controller from './Controller.js';
 import prisma from '../database/prisma.js';
 import hashPassword from '../utils/hashPassword.js';
-import { BadRequest, NotFound } from '../utils/CustomError.js';
+import {
+  BadRequest, NotFound, Unauthorized, Forbidden,
+} from '../utils/CustomError.js';
 
 const { Role } = Prisma;
 
@@ -52,6 +54,10 @@ class UserController extends Controller {
   }
 
   async update(req, res, next) {
+    if (req.userLogged.id !== req.params.id) {
+      throw new Forbidden('You cannot update this user\'s information');
+    }
+
     const schema = Joi.object({
       role: Joi.string().valid(Role.USER, Role.ADMIN),
       name: Joi.string(),
@@ -101,7 +107,7 @@ class UserController extends Controller {
     }
 
     if (!(await bcrypt.compare(password, user.password))) {
-      throw new BadRequest('Password is incorrect');
+      throw new Unauthorized('Password is incorrect');
     }
 
     delete user.password;
@@ -110,21 +116,43 @@ class UserController extends Controller {
 
     res.json({ token });
   }
-  /*
-  // overwrite getOne, index and delete. index returns only the current logged user
-  // or all of the users if the current logged one is admin.
+
+  // secure route restricted to "Admin" users only
+  async index(req, res, next) {
+    if (req.userLogged.role === 'ADMIN') {
+      return super.index(req, res, next);
+    }
+
+    // if I want the current user to check their own information using this route
+    // I can call the getOne method, passing the current logged user id in the req.params.id.
+    // req.params.id = req.userLogged.id;
+    // return this.getOne(req, res, next);
+
+    throw new Forbidden('You don\'t have Admin privileges to access this route');
+  }
+
+  // Admin users can access all users' information by passing the Id,
+  // but no-admin role users cannot have access to other users' information,
+  // except for their own information
+  async getOne(req, res, next) {
+    const { id } = req.params;
+
+    if (id === req.userLogged.id || req.userLogged.role === 'ADMIN') {
+      return super.getOne(req, res, next);
+    }
+
+    throw new Forbidden('You don\'t have Admin privileges');
+  }
+
   // delele only allows the deletion of some user if the current user is the one logged
-  async getOne() {
+  async remove(req, res, next) {
+    const { id } = req.params;
+    if (id === req.userLogged.id) {
+      return super.remove(req, res, next);
+    }
 
+    throw new Forbidden('You cannot delete this user');
   }
-
-  async index() {
-
-  }
-
-  async remove() {
-
-  } */
 }
 
 export default UserController;

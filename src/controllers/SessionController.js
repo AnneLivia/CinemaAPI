@@ -2,7 +2,7 @@ import joiImported from 'joi';
 import joiDate from '@joi/date';
 import Prisma from '@prisma/client';
 import Controller from './Controller.js';
-import { BadRequest } from '../utils/CustomError.js';
+import { BadRequest, Forbidden } from '../utils/CustomError.js';
 
 const Joi = joiImported.extend(joiDate);
 const { SessionRoom } = Prisma;
@@ -12,7 +12,10 @@ class Session extends Controller {
     super('session');
   }
 
+  // only admin user can store
   async store(req, res, next) {
+    if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
+
     const Schema = Joi.object({
       // HH = hours (24 hours time). if hh (12 hours time with a or A where a = am and A = pm)
       sessionDate: Joi.date().required().format('DD/MM/YYYY HH:mm'),
@@ -36,7 +39,10 @@ class Session extends Controller {
     super.store(req, res, next);
   }
 
+  // only admin user can update
   async update(req, res, next) {
+    if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
+
     const Schema = Joi.object({
       // HH = hours (24 hours time). if hh (12 hours time with a or A where a = am and A = pm)
       sessionDate: Joi.date().format('DD/MM/YYYY HH:mm'),
@@ -58,6 +64,13 @@ class Session extends Controller {
     }
 
     super.update(req, res, next);
+  }
+
+  // only admin can delete
+  async remove(req, res, next) {
+    if (req.userLogged.role === 'ADMIN') { return super.remove(req, res, next); }
+
+    throw new Forbidden('You don\'t have Admin privileges');
   }
 }
 
