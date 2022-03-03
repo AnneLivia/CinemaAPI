@@ -138,3 +138,34 @@
 {"level":"info","message":"\u001b[0mGET /api/movies/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[32m200\u001b[0m 27.633 ms - 144\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:12:40.098Z"}
 {"level":"info","message":"\u001b[0mPUT /api/movies/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[33m403\u001b[0m 2.624 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:12:44.793Z"}
 {"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T18:13:59.020Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T18:14:10.869Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/movies/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[33m403\u001b[0m 8.675 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:15.383Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/sessions/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[33m403\u001b[0m 2.106 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:22.239Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[33m403\u001b[0m 1.826 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:26.760Z"}
+{"level":"info","message":"\u001b[0mPOST /api/sessions/ \u001b[33m403\u001b[0m 0.921 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:33.676Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[33m404\u001b[0m 80.865 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:38.221Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 7.775 ms - 443\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:47.253Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[32m200\u001b[0m 4.545 ms - 143\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:52.441Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[33m403\u001b[0m 0.986 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:54.539Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[33m403\u001b[0m 1.952 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:14:57.402Z"}
+{"level":"info","message":"\u001b[0mPOST /api/sessions/ \u001b[33m403\u001b[0m 0.969 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:15:01.952Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[32m200\u001b[0m 6.087 ms - 143\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:15:04.684Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 5.658 ms - 443\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:15:08.723Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies \u001b[32m200\u001b[0m 12.380 ms - 618\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:15:37.480Z"}
+{"level":"info","message":"\u001b[0mPUT /api/movies/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[32m200\u001b[0m 89.415 ms - 157\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:16:26.387Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/c3de203d-f302-479a-8d4f-5090c64341a0 \u001b[32m200\u001b[0m 3.909 ms - 146\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:16:31.049Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 4.174 ms - 620\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:16:40.119Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 59.952 ms - 443\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:16:43.560Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/0fb887c2-3392-4874-867a-bb878e4cb10d \u001b[32m200\u001b[0m 72.459 ms - 150\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:06.138Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 4.251 ms - 439\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:10.648Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[33m403\u001b[0m 0.897 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:25.052Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 6.157 ms - 439\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:30.880Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[32m200\u001b[0m 37.111 ms - 46\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:33.314Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/b7b8c288-6202-4abb-8429-f98e452855df \u001b[33m404\u001b[0m 7.033 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:38.880Z"}
+{"level":"info","message":"\u001b[0mGET /api/sessions/ \u001b[32m200\u001b[0m 3.773 ms - 295\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:40.670Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies \u001b[32m200\u001b[0m 63.016 ms - 620\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:17:47.162Z"}
+{"level":"info","message":"\u001b[0mPUT /api/sessions/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[33m403\u001b[0m 0.940 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:06.593Z"}
+{"level":"info","message":"\u001b[0mPUT /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[33m403\u001b[0m 0.726 ms - 45\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:10.763Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[32m200\u001b[0m 5.663 ms - 147\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:15.047Z"}
+{"level":"info","message":"\u001b[0mDELETE /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[32m200\u001b[0m 99.080 ms - 44\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:17.471Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[33m404\u001b[0m 4.362 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:20.196Z"}
