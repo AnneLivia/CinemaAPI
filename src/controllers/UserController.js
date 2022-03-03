@@ -6,6 +6,7 @@ import bcrypt from 'bcryptjs';
 import Controller from './Controller.js';
 import prisma from '../database/prisma.js';
 import hashPassword from '../utils/hashPassword.js';
+import config from '../config/config.js';
 import {
   BadRequest, NotFound, Unauthorized, Forbidden,
 } from '../utils/CustomError.js';
@@ -14,7 +15,7 @@ const { Role } = Prisma;
 
 const Joi = joiImported.extend(joiDate);
 
-const { JWT_SECRET } = process.env;
+const { JWT_SECRET } = config;
 
 class UserController extends Controller {
   constructor() {

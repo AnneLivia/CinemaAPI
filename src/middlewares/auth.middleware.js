@@ -1,8 +1,9 @@
 import unless from 'express-unless';
 import jwt from 'jsonwebtoken';
+import config from '../config/config.js';
 import { Unauthorized } from '../utils/CustomError.js';
 
-const { JWT_SECRET } = process.env;
+const { JWT_SECRET } = config;
 
 const authMiddleware = (req, res, next) => {
   const { authorization } = req.headers;

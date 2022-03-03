@@ -4,10 +4,12 @@
 generator client {
   provider = "prisma-client-js"
 }
-
+// I can let url "" because I overwrote this in the new Prisma.PrismaClient()...
+// To migrate the tables to the database test, I inserted in url: env("DATABASE_URL_TEST"), 
+// and executed the command prisma migrate dev.
 datasource db {
   provider = "postgresql"
-  url      = env("DATABASE_URL")
+  url      = ""
 }
 
 enum Role {

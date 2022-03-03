@@ -169,3 +169,27 @@
 {"level":"info","message":"\u001b[0mGET /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[32m200\u001b[0m 5.663 ms - 147\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:15.047Z"}
 {"level":"info","message":"\u001b[0mDELETE /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[32m200\u001b[0m 99.080 ms - 44\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:17.471Z"}
 {"level":"info","message":"\u001b[0mGET /api/movies/9cade420-78dd-47ef-a127-95fb0187dd74 \u001b[33m404\u001b[0m 4.362 ms - 30\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T18:18:20.196Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:09:59.024Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:10:08.987Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:10:16.092Z"}
+{"level":"info","message":"Server started at port 2000.","service":"user-service","timestamp":"2022-03-03T20:10:21.603Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:10:24.683Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:11:30.590Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:11:42.428Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:12:28.454Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:21:30.402Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:22:21.801Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 147.298 ms - 472\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T20:23:35.668Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:26:18.791Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:26:33.724Z"}
+{"level":"info","message":"Server started at port 2000.","service":"user-service","timestamp":"2022-03-03T20:26:49.931Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:27:00.199Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:27:31.140Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[31m500\u001b[0m 276.307 ms - 133\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T20:27:38.231Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:27:55.748Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:28:42.369Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 240.839 ms - 472\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T20:28:44.887Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:42:22.290Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 276.601 ms - 14\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T20:42:25.558Z"}
+{"level":"info","message":"Server started at port 3000.","service":"user-service","timestamp":"2022-03-03T20:42:55.375Z"}
+{"level":"info","message":"\u001b[0mGET /api/movies/ \u001b[32m200\u001b[0m 78.657 ms - 472\u001b[0m\n","service":"user-service","timestamp":"2022-03-03T20:42:57.047Z"}

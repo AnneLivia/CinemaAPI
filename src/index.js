@@ -1,17 +1,16 @@
 import 'express-async-errors';
 import express from 'express';
-import dotenv from 'dotenv';
 import morgan from 'morgan';
 import cors from 'cors';
 import helmet from 'helmet';
 import routes from './routes/routes.js';
+import config from './config/config.js';
 
 import authMiddleware from './middlewares/auth.middleware.js';
 import errorMiddleware from './middlewares/errors.middleware.js';
 import logger from './utils/logger.js';
 
-dotenv.config();
-const PORT = process.env.PORT || 3000;
+const { PORT } = config;
 
 const app = express();
 
