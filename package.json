@@ -8,6 +8,7 @@
   "author": "Anne Livia <annelivia16@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@jest/globals": "^27.5.1",
     "@joi/date": "^2.1.0",
     "@prisma/client": "^3.10.0",
     "bcryptjs": "^2.4.3",
