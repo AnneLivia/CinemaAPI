@@ -113,6 +113,12 @@ class Controller {
       await this.client.delete({ where: { id } });
       res.json({ message: `${this.model} was deleted successfully` });
     } catch (error) {
+      // If I try to delete a movie that is being referenced in session,
+      // it occurs an error Foreign key constraint failed on the field:
+      // `Session_movieId_fkey (index)`. code: P2003.
+      if (error.code === 'P2003') {
+        next(new BadRequest(`This ${this.model} id is being referenced in another model`));
+      }
       // returns a RecordNotFound if the registry is not found
       console.error(error);
       next(new NotFound('Record to delete does not exist'));
