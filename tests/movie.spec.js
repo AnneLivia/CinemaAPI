@@ -17,7 +17,7 @@ let movie1Id;
 
 beforeAll(async () => {
   jest.spyOn(console, 'log').mockImplementation(() => {});
-  jest.spyOn(console, 'error').mockImplementation(() => {});
+  // jest.spyOn(console, 'error').mockImplementation(() => {});
 
   // creating admin and common user
   await supertest(app).post('/api/users').send(user3);

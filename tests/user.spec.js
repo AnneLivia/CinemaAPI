@@ -13,7 +13,7 @@ beforeAll(async () => {
   // spyOn allows you to mock either the whole module or the individual functions of the module.
   // At its most general usage, it can be used to track calls on a method
   // spyOn Returns a Jest mock function
-  jest.spyOn(console, 'error').mockImplementation(() => {});
+  // jest.spyOn(console, 'error').mockImplementation(() => {});
   jest.spyOn(console, 'log').mockImplementation(() => {});
 });
 
@@ -248,7 +248,6 @@ describe('GET HTTP Request', () => {
         const result = await supertest(app)
           .get(`/api/users/${idUser2}`)
           .set({ Authorization: `Bearer ${user1Token}` });
-
         expect(result.statusCode).toBe(403);
       });
     });
