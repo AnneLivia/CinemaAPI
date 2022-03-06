@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-// import { jest } from '@jest/globals';
+import { jest } from '@jest/globals';
 import prisma from '../src/database/prisma.js';
 import app from '../src/index.js';
 import { users } from './data.js';
@@ -13,8 +13,8 @@ beforeAll(() => {
   // spyOn allows you to mock either the whole module or the individual functions of the module.
   // At its most general usage, it can be used to track calls on a method
   // spyOn Returns a Jest mock function
-  // jest.spyOn(console, 'error').mockImplementation(() => {});
-  // jest.spyOn(console, 'log').mockImplementation(() => {});
+  jest.spyOn(console, 'error').mockImplementation(() => {});
+  jest.spyOn(console, 'log').mockImplementation(() => {});
 });
 
 // after test, should remove all users
