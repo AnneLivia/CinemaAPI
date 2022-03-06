@@ -9,10 +9,14 @@ const app = express();
 
 app.use('/api', MovieRouter);
 
-describe('GET /api/movies', () => {
-  it('should return movies', async () => {
-    const result = await supertest(app).get('/api/movies');
-    expect(result.statusCode).toBe(200);
+describe('GET', () => {
+  describe('GET /api/movies', () => {
+    describe('When access this route', () => {
+      it('should return all movies', async () => {
+        const result = await supertest(app).get('/api/movies');
+        expect(result.statusCode).toBe(200);
+      });
+    });
   });
 });
 

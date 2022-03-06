@@ -2,25 +2,7 @@ import supertest from 'supertest';
 import { jest } from '@jest/globals';
 import prisma from '../src/database/prisma.js';
 import app from '../src/index.js';
-
-const users = {
-  user1: {
-    name: 'Teste User 1',
-    birthDate: '12/12/2012',
-    reviewer: false,
-    email: 'teste@gmail.com',
-    password: '12345678',
-    role: 'USER',
-  },
-  user2: {
-    name: 'Teste User 2',
-    birthDate: '12/12/2013',
-    reviewer: true,
-    email: 'teste2@gmail.com',
-    password: '12345678',
-    role: 'ADMIN',
-  },
-};
+import { users } from './data.js';
 
 // before initialize test, should remove all users and creating a mock of console.log
 beforeAll(async () => {
