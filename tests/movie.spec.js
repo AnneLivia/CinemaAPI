@@ -2,7 +2,7 @@
 // because jest ships with experimental support for ECMAScript Modules (ESM)
 // @types/jest jest autocomplete
 import supertest from 'supertest';
-import { jest } from '@jest/globals';
+// import { jest } from '@jest/globals';
 import app from '../src/index.js';
 import { movies, users, sessions } from './data.js';
 import prisma from '../src/database/prisma.js';
@@ -16,7 +16,7 @@ const user4 = users[3]; // admin
 let movie1Id;
 
 beforeAll(async () => {
-  jest.spyOn(console, 'log').mockImplementation(() => {});
+  // jest.spyOn(console, 'log').mockImplementation(() => {});
   // jest.spyOn(console, 'error').mockImplementation(() => {});
 
   // creating admin and common user
