@@ -4,12 +4,13 @@
 generator client {
   provider = "prisma-client-js"
 }
+
 // I can let url "" because I overwrote this in the new Prisma.PrismaClient()...
-// To migrate the tables to the database test, I inserted in url: env("DATABASE_URL_TEST"), 
+// To migrate the tables to the database test, I inserted in url: env("DATABASE_URL_TEST"),
 // and executed the command prisma migrate dev.
 datasource db {
   provider = "postgresql"
-  url      = ""
+  url      = env("DATABASE_URL")
 }
 
 enum Role {
@@ -30,6 +31,19 @@ enum Classification {
   RESTRICTED
 }
 
+enum SeatType {
+  WHELLCHAIR
+  STARDARD
+  DOUBLESEAT
+}
+
+enum TicketCategory {
+  FREE
+  HALFPRICE
+  STARDARD
+  PROMOTIONAL
+}
+
 model Movie {
   id             String         @id @default(uuid())
   name           String
@@ -40,21 +54,51 @@ model Movie {
 }
 
 model Session {
-  id      String      @id @default(uuid())
-  room    SessionRoom @default(COMMON)
-  sessionDate String
-  movie   Movie       @relation(fields: [movieId], references: [id])
-  movieId String
+  id           String         @id @default(uuid())
+  room         SessionRoom    @default(COMMON)
+  sessionDate  String
+  movie        Movie          @relation(fields: [movieId], references: [id])
+  movieId      String
+  price        Float
+  SessionSeats SessionSeats[]
+  Ticket       Ticket[]
+}
+
+model SessionSeats {
+  id        String   @id @default(uuid())
+  line      String
+  column    Int
+  name      String
+  session   Session  @relation(fields: [sessionId], references: [id])
+  sessionId String
+  type      SeatType @default(STARDARD)
+  disable   Boolean  @default(false) // seat is disable or not
+  occupied  Boolean  @default(false) // the seat is occupied by some user or not
+  Ticket    Ticket[] // ? 
+  // A ticket can be associated with one seat but a seat does not have many tickets. (check this out)
 }
 
 model User {
-  id String @id @default(uuid())
-  role Role @default(USER)
-  name String 
+  id        String   @id @default(uuid())
+  role      Role     @default(USER)
+  name      String
   birthDate String
-  email String @unique
-  password String 
-  reviewer Boolean @default(false) 
+  email     String   @unique
+  password  String
+  reviewer  Boolean  @default(false)
   updatedAt DateTime @updatedAt
-  createAt DateTime @default(now()) 
+  createAt  DateTime @default(now())
+  Ticket    Ticket[]
+}
+
+model Ticket {
+  id             String         @id @default(uuid())
+  session        Session        @relation(fields: [sessionId], references: [id])
+  user           User           @relation(fields: [userId], references: [id])
+  sessionId      String
+  userId         String
+  category       TicketCategory @default(STARDARD)
+  paymentStatus  Boolean        @default(false)
+  seat           SessionSeats   @relation(fields: [sessionSeatsId], references: [id])
+  sessionSeatsId String
 }

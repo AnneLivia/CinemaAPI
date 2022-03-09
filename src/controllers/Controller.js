@@ -3,10 +3,19 @@ import { BadRequest, NotFound } from '../utils/CustomError.js';
 import logger from '../utils/logger.js';
 
 class Controller {
-  constructor(model) {
+  // default value of options for findmany method {} = without options;
+  // If I pass something inside the {}, such as: include: {model: true}
+  // this is going to include the model's information in findmany results
+  constructor(
+    model,
+    prismaOptions = {
+      findMany: {},
+      // other options for methods
+    },
+  ) {
     this.model = model;
     this.client = prisma[model];
-
+    this.prismaOptions = prismaOptions;
     if (!this.client) {
       logger.error(`Model ${this.model} does not exists on Prisma Schema.`);
     }
@@ -22,7 +31,9 @@ class Controller {
   // eslint-disable-next-line no-unused-vars
   async index(req, res, next) {
     // return an array of registries
-    const records = await this.client.findMany();
+    // this.prismaOptions.findMany = contains all additional options I passed to the constructor
+    // this.prismaOptions.findMany === {some_option: {something: something...}};
+    const records = await this.client.findMany(this.prismaOptions.findMany);
     res.json({ records });
   }
 
@@ -65,7 +76,13 @@ class Controller {
       // need to pass the error to the express error middleware using next(error)
       // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
       if (error.code === 'P2002') {
-        next(new BadRequest(`Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`));
+        next(
+          new BadRequest(
+            `Unique constraint failed on the field(s): ${error.meta.target.join(
+              ', ',
+            )}`,
+          ),
+        );
       }
 
       // other errors
@@ -92,7 +109,13 @@ class Controller {
     } catch (error) {
       // Prisma error code: 'P2002' ==  Unique constraint failed on some fields of the model
       if (error.code === 'P2002') {
-        next(new BadRequest(`Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`));
+        next(
+          new BadRequest(
+            `Unique constraint failed on the field(s): ${error.meta.target.join(
+              ', ',
+            )}`,
+          ),
+        );
       }
 
       console.error(error);
@@ -117,7 +140,11 @@ class Controller {
       // it occurs an error Foreign key constraint failed on the field:
       // `Session_movieId_fkey (index)`. code: P2003.
       if (error.code === 'P2003') {
-        next(new BadRequest(`This ${this.model} id is being referenced in another model`));
+        next(
+          new BadRequest(
+            `This ${this.model} id is being referenced in another model`,
+          ),
+        );
       }
       // returns a RecordNotFound if the registry is not found
       console.error(error);

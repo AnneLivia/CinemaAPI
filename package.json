@@ -38,6 +38,10 @@
   "scripts": {
     "start": "node src/index.js",
     "dev": "cross-env NODE_ENV=development nodemon src/index.js",
-    "test": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --runInBand"
+    "test": "cross-env NODE_ENV=test NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
+    "prisma-migrate" : "prisma migrate dev",
+    "prisma-generate" : "prisma generate",
+    "prisma-studio" : "prisma studio",
+    "prisma-seed" : "node prisma/seed.js"
   }
 }

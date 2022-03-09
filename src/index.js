@@ -20,7 +20,11 @@ const { PORT } = config;
 // using middlewares
 app.use(cors());
 app.use(express.json());
-app.use(morgan('dev', { stream: logger.stream }));
+// app.use(morgan('dev', { stream: logger.stream }));
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms', (message) => {
+  logger.http(message.trim());
+}));
+
 app.use(helmet());
 
 // using unless to conditionally skip a middleware when a condition is met
