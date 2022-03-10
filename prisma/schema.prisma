@@ -44,6 +44,13 @@ enum TicketCategory {
   PROMOTIONAL
 }
 
+enum SeatStatus {
+  AVAILABLE
+  SELECTED
+  BLOCKED
+  OCCUPIED
+}
+
 model Movie {
   id             String         @id @default(uuid())
   name           String
@@ -65,17 +72,18 @@ model Session {
 }
 
 model SessionSeats {
-  id        String   @id @default(uuid())
+  id        String     @id @default(uuid())
   line      String
   column    Int
   name      String
-  session   Session  @relation(fields: [sessionId], references: [id])
+  session   Session    @relation(fields: [sessionId], references: [id])
   sessionId String
-  type      SeatType @default(STARDARD)
-  disable   Boolean  @default(false) // seat is disable or not
-  occupied  Boolean  @default(false) // the seat is occupied by some user or not
+  type      SeatType   @default(STARDARD)
+  status    SeatStatus @default(AVAILABLE) // the seat is occupied by some user or not
   Ticket    Ticket[] // ? 
-  // A ticket can be associated with one seat but a seat does not have many tickets. (check this out)
+  // A ticket can be associated with one seat (created by one session), 
+  // but a seat (associated to one session), does not have many tickets. (check this out)
+  // disable   Boolean    @default(false) // seat is disable or not (In seatStatus thre's a BLOCKED)
 }
 
 model User {

@@ -43,7 +43,7 @@ class Session extends Controller {
             column,
             name: `${line}${column}`,
             type: 'STARDARD',
-            occupied: false,
+            state: 'AVAILABLE',
             disable: false,
           },
         );
