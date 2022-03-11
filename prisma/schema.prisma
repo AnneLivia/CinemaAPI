@@ -83,7 +83,7 @@ model SessionSeats {
   Ticket    Ticket[] // ? 
   // A ticket can be associated with one seat (created by one session), 
   // but a seat (associated to one session), does not have many tickets. (check this out)
-  // disable   Boolean    @default(false) // seat is disable or not (In seatStatus thre's a BLOCKED)
+  // disable   Boolean    @default(false) // seat is disable or not (In seatStatus there's a BLOCKED)
 }
 
 model User {
