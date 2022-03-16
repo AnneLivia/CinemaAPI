@@ -131,7 +131,7 @@ class Session extends Controller {
     throw new Forbidden('You don\'t have Admin privileges');
   }
 
-  async updateSeat(req, res) {
+  async updateSeat(req, res, next) {
     const { idSession, idSeat } = req.params;
 
     const { status, type } = req.body;
@@ -147,18 +147,37 @@ class Session extends Controller {
       throw new BadRequest('Invalid data', error.details.map(({ message }) => message));
     }
 
-    const sessionSeat = await this.prismaClient.session.update(
-      {
-        where: { id: idSession },
-        data: {
-          SessionSeat: {
-            update: { data: { type, status }, where: { id: idSeat } },
+    try {
+      const sessionSeat = await this.prismaClient.session.update(
+        {
+          where: { id: idSession },
+          data: {
+            SessionSeat: {
+              update: { data: { type, status }, where: { id: idSeat } },
+            },
+          },
+          // combine include and where to only retrieve the idSeat data
+          include: {
+            SessionSeat: {
+              where: {
+                id: idSeat,
+              },
+            },
           },
         },
-      },
-    );
+      );
 
-    res.json(sessionSeat.SessionSeat);
+      res.json(sessionSeat.SessionSeat);
+    } catch (err) {
+      console.error(err);
+      // "code":"P2016","meta":{"details":"Error for binding '1':
+      // AssertionError(\"Expected a valid parent ID to be present for nested update to-one case.
+      if (err.code === 'P2016') {
+        next(new BadRequest('One or both passed Ids are incorrect'));
+      }
+      // for other errors that might occur
+      next(new BadRequest('Unexpected error'));
+    }
   }
 }
 

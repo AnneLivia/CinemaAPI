@@ -13,6 +13,7 @@ class Controller {
       // other options for methods
     },
   ) {
+    this.prismaClient = prisma;
     this.model = model;
     this.client = prisma[model];
     this.prismaOptions = prismaOptions;
@@ -47,13 +48,15 @@ class Controller {
   async getOne(req, res, next) {
     const { id } = req.params;
 
-    const record = await this.client.findUnique({ where: { id } });
+    const record = await this.client.findUnique(
+      { where: { id } },
+    );
 
     if (record) {
       return res.json(record);
     }
 
-    console.log(`${this.model} with id ${id} was not found`);
+    logger.error(`${this.model} with id ${id} was not found`);
     // If synchronous code throws an error, I can throw it using just throw new Error('BROKEN')
     // and Express will catch this on its own.
     // For errors returned from asynchronous functions invoked by route handlers and middleware
@@ -78,15 +81,14 @@ class Controller {
       if (error.code === 'P2002') {
         next(
           new BadRequest(
-            `Unique constraint failed on the field(s): ${error.meta.target.join(
-              ', ',
-            )}`,
+            `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`,
           ),
         );
       }
 
       // other errors
-      console.error(error);
+      // console.error(error);
+      logger.error(error);
       next(new BadRequest('Unexpected error'));
     }
   }
@@ -111,14 +113,12 @@ class Controller {
       if (error.code === 'P2002') {
         next(
           new BadRequest(
-            `Unique constraint failed on the field(s): ${error.meta.target.join(
-              ', ',
-            )}`,
+            `Unique constraint failed on the field(s): ${error.meta.target.join(', ')}`,
           ),
         );
       }
 
-      console.error(error);
+      logger.error(error);
       next(new NotFound('Record to update does not exist'));
     }
   }
@@ -147,7 +147,7 @@ class Controller {
         );
       }
       // returns a RecordNotFound if the registry is not found
-      console.error(error);
+      logger.error(error);
       next(new NotFound('Record to delete does not exist'));
     }
   }

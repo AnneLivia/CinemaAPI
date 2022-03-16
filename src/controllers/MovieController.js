@@ -5,25 +5,32 @@ import { BadRequest, Forbidden } from '../utils/CustomError.js';
 
 const { Classification } = Prisma;
 
+const schema = Joi.object({
+  name: Joi.string().required().max(50),
+  description: Joi.string().required().max(5000),
+  duration: Joi.number().required().positive().max(500),
+  classification: Joi.string().valid(...Object.values(Classification)),
+});
+
 class MovieController extends Controller {
   constructor() {
-    super('movie');
+    // Can also show what is referencing movie
+    super('movie', {
+      findMany: {
+        include: {
+          Session: {
+            include: {
+              Ticket: true,
+            },
+          },
+        },
+      },
+    });
   }
 
   // only admin user can store
   async store(req, res, next) {
     if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
-
-    const schema = Joi.object({
-      name: Joi.string().required().max(50),
-      description: Joi.string().required().max(5000),
-      duration: Joi.number().required().positive().max(500),
-      classification: Joi.string().valid(
-        Classification.GENERAL_AUDIENCE,
-        Classification.PARENT_GUIDANCE_SUGGESTED,
-        Classification.RESTRICTED,
-      ),
-    });
 
     const schemaValidated = schema.validate(req.body, { abortEarly: false });
 
@@ -38,17 +45,6 @@ class MovieController extends Controller {
   // only admin user can update
   async update(req, res, next) {
     if (req.userLogged.role !== 'ADMIN') { throw new Forbidden('You don\'t have Admin privileges'); }
-
-    const schema = Joi.object({
-      name: Joi.string().max(50),
-      description: Joi.string().max(5000),
-      duration: Joi.number().positive().max(500),
-      classification: Joi.string().valid(
-        Classification.GENERAL_AUDIENCE,
-        Classification.PARENT_GUIDANCE_SUGGESTED,
-        Classification.RESTRICTED,
-      ),
-    });
 
     const { error } = schema.validate(req.body, { abortEarly: false });
 

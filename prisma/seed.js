@@ -54,7 +54,7 @@ import prisma from '../src/database/prisma.js';
       sessionDate: '09/03/2022',
       price: 200,
       room: 'COMMON',
-      SessionSeats: {
+      SessionSeat: {
         createMany: {
           data: [
             {
@@ -75,7 +75,7 @@ import prisma from '../src/database/prisma.js';
 
   // it's going to be used on tickets
   const sessionId = (await prisma.session.findFirst({})).id;
-  const sessionSeatId = (await prisma.sessionSeats.findFirst({})).id;
+  const sessionSeatId = (await prisma.sessionSeat.findFirst({})).id;
 
   // creating ticket
   await prisma.ticket.create({

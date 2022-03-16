@@ -61,17 +61,17 @@ model Movie {
 }
 
 model Session {
-  id           String         @id @default(uuid())
-  room         SessionRoom    @default(COMMON)
-  sessionDate  String
-  movie        Movie          @relation(fields: [movieId], references: [id])
-  movieId      String
-  price        Float
-  SessionSeats SessionSeats[]
-  Ticket       Ticket[]
+  id          String        @id @default(uuid())
+  room        SessionRoom   @default(COMMON)
+  sessionDate String
+  movie       Movie         @relation(fields: [movieId], references: [id])
+  movieId     String
+  price       Float
+  SessionSeat SessionSeat[]
+  Ticket      Ticket[]
 }
 
-model SessionSeats {
+model SessionSeat {
   id        String     @id @default(uuid())
   line      String
   column    Int
@@ -81,7 +81,7 @@ model SessionSeats {
   type      SeatType   @default(STARDARD)
   status    SeatStatus @default(AVAILABLE) // the seat is occupied by some user or not
   Ticket    Ticket[] // ? 
-  // A ticket can be associated with one seat (created by one session), 
+  // A ticket can be associated with one seat (created by one session),
   // but a seat (associated to one session), does not have many tickets. (check this out)
   // disable   Boolean    @default(false) // seat is disable or not (In seatStatus there's a BLOCKED)
 }
@@ -100,13 +100,13 @@ model User {
 }
 
 model Ticket {
-  id             String         @id @default(uuid())
-  session        Session        @relation(fields: [sessionId], references: [id])
-  user           User           @relation(fields: [userId], references: [id])
-  sessionId      String
-  userId         String
-  category       TicketCategory @default(STARDARD)
-  paymentStatus  Boolean        @default(false)
-  seat           SessionSeats   @relation(fields: [sessionSeatsId], references: [id])
-  sessionSeatsId String
+  id            String         @id @default(uuid())
+  session       Session        @relation(fields: [sessionId], references: [id])
+  user          User           @relation(fields: [userId], references: [id])
+  sessionId     String
+  userId        String
+  category      TicketCategory @default(STARDARD)
+  paymentStatus Boolean        @default(false)
+  seat          SessionSeat    @relation(fields: [sessionSeatId], references: [id])
+  sessionSeatId String
 }
